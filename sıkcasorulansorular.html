@@ -1,111 +1,176 @@
 <!DOCTYPE html>
 <html lang="tr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sıkça Sorulan Sorular - Türkiye Milli Takım</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background: #0b1220;
-      color: #ffffff;
-      margin: 0;
-      padding: 0;
-    }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    header {
-      background: #e30a17;
-      padding: 20px;
-      text-align: center;
-      font-size: 24px;
-      font-weight: bold;
-    }
+<title>Sıkça Sorulan Sorular | Türkiye Futbol Portalı</title>
 
-    .container {
-      max-width: 900px;
-      margin: auto;
-      padding: 20px;
-    }
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 
-    .faq {
-      margin-bottom: 15px;
-      border: 1px solid #333;
-      border-radius: 8px;
-      overflow: hidden;
-    }
+<style>
 
-    .question {
-      background: #111a2e;
-      padding: 15px;
-      cursor: pointer;
-      font-weight: bold;
-    }
+body{
+background: linear-gradient(135deg,#0f172a,#111827);
+color:white;
+font-family:Segoe UI;
+}
 
-    .answer {
-      display: none;
-      padding: 15px;
-      background: #1a2742;
-      line-height: 1.5;
-    }
+.header{
+text-align:center;
+padding:60px 20px 20px;
+}
 
-    footer {
-      text-align: center;
-      padding: 20px;
-      background: #0a0f1a;
-      color: #aaa;
-      margin-top: 30px;
-    }
-  </style>
+.header h1{
+font-size:3rem;
+font-weight:800;
+}
+
+.header p{
+opacity:.8;
+}
+
+.container-box{
+max-width:900px;
+margin:auto;
+padding:20px;
+}
+
+/* ACCORDION */
+.accordion-item{
+background:rgba(255,255,255,0.05);
+border:none;
+border-radius:15px !important;
+margin-bottom:15px;
+overflow:hidden;
+}
+
+.accordion-button{
+background:rgba(255,255,255,0.08);
+color:white;
+font-weight:600;
+border:none;
+box-shadow:none;
+}
+
+.accordion-button:not(.collapsed){
+background:#e30a17;
+color:white;
+}
+
+.accordion-body{
+background:rgba(0,0,0,0.2);
+color:#ddd;
+}
+
+footer{
+text-align:center;
+padding:30px;
+opacity:.6;
+margin-top:40px;
+}
+
+.badge-title{
+background:#e30a17;
+padding:6px 12px;
+border-radius:20px;
+font-size:14px;
+}
+
+</style>
 </head>
+
 <body>
 
-<header>
-  🇹🇷 Türkiye Milli Takımı - Dünya Kupası SSS
-</header>
+<div class="header">
+<span class="badge-title">🇹🇷 Türkiye Futbol Portalı</span>
+<h1>Sıkça Sorulan Sorular</h1>
+<p>Dünya Kupası ve Türkiye Milli Takımı hakkında en çok merak edilenler</p>
+</div>
 
-<div class="container">
+<div class="container-box">
 
-  <div class="faq">
-    <div class="question">Dünya Kupası ne zaman başlıyor?</div>
-    <div class="answer">2026 FIFA Dünya Kupası 11 Haziran 2026 tarihinde başlayacaktır.</div>
+<div class="accordion" id="faq">
+
+  <!-- 1 -->
+  <div class="accordion-item">
+    <h2 class="accordion-header">
+      <button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#q1">
+        Dünya Kupası ne zaman başlıyor?
+      </button>
+    </h2>
+    <div id="q1" class="accordion-collapse collapse show" data-bs-parent="#faq">
+      <div class="accordion-body">
+        2026 FIFA Dünya Kupası Haziran 2026’da başlayacaktır.
+      </div>
+    </div>
   </div>
 
-  <div class="faq">
-    <div class="question">Türkiye hangi grupta?</div>
-    <div class="answer">Türkiye D Grubu’nda ABD, Paraguay ve Avustralya ile yer almaktadır.</div>
+  <!-- 2 -->
+  <div class="accordion-item">
+    <h2 class="accordion-header">
+      <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#q2">
+        Türkiye turnuvaya katılıyor mu?
+      </button>
+    </h2>
+    <div id="q2" class="accordion-collapse collapse" data-bs-parent="#faq">
+      <div class="accordion-body">
+        Türkiye elemelerde mücadele etmektedir ve turnuvaya katılma hedefindedir.
+      </div>
+    </div>
   </div>
 
-  <div class="faq">
-    <div class="question">Türkiye’nin ilk maçı ne zaman?</div>
-    <div class="answer">İlk maç 14 Haziran 2026 tarihinde Avustralya’ya karşı oynanacaktır.</div>
+  <!-- 3 -->
+  <div class="accordion-item">
+    <h2 class="accordion-header">
+      <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#q3">
+        Dünya Kupası kaç yılda bir yapılır?
+      </button>
+    </h2>
+    <div id="q3" class="accordion-collapse collapse" data-bs-parent="#faq">
+      <div class="accordion-body">
+        Dünya Kupası her 4 yılda bir düzenlenir.
+      </div>
+    </div>
   </div>
 
-  <div class="faq">
-    <div class="question">Maçlar hangi saatlerde oynanıyor?</div>
-    <div class="answer">Maç saatleri genellikle Türkiye saati ile sabah erken saatlere denk gelmektedir.</div>
+  <!-- 4 -->
+  <div class="accordion-item">
+    <h2 class="accordion-header">
+      <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#q4">
+        En çok Dünya Kupası kazanan ülke hangisi?
+      </button>
+    </h2>
+    <div id="q4" class="accordion-collapse collapse" data-bs-parent="#faq">
+      <div class="accordion-body">
+        Brezilya, 5 şampiyonluk ile en çok kazanan ülkedir.
+      </div>
+    </div>
   </div>
 
-  <div class="faq">
-    <div class="question">Türkiye’nin şampiyonluk şansı nedir?</div>
-    <div class="answer">Turnuva çok zorlu olduğu için net tahmin yapmak mümkün değildir ancak güçlü bir kadroya sahiptir.</div>
+  <!-- 5 -->
+  <div class="accordion-item">
+    <h2 class="accordion-header">
+      <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#q5">
+        Maç saatleri Türkiye’ye göre nasıl?
+      </button>
+    </h2>
+    <div id="q5" class="accordion-collapse collapse" data-bs-parent="#faq">
+      <div class="accordion-body">
+        Maçlar genelde Türkiye saati ile sabah erken veya gece geç saatlerde oynanabilir.
+      </div>
+    </div>
   </div>
 
 </div>
 
+</div>
+
 <footer>
-  © 2026 Türkiye Milli Takım Fan Sitesi
+© 2026 Türkiye Futbol Portalı | Tüm hakları saklıdır
 </footer>
 
-<script>
-  const questions = document.querySelectorAll(".question");
-
-  questions.forEach(q => {
-    q.addEventListener("click", () => {
-      const answer = q.nextElementSibling;
-      answer.style.display = answer.style.display === "block" ? "none" : "block";
-    });
-  });
-</script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
 </html>
