@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sıkça Sorulan Sorular - Türkiye Milli Takım</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #0b1220;
+      color: #ffffff;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background: #e30a17;
+      padding: 20px;
+      text-align: center;
+      font-size: 24px;
+      font-weight: bold;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: auto;
+      padding: 20px;
+    }
+
+    .faq {
+      margin-bottom: 15px;
+      border: 1px solid #333;
+      border-radius: 8px;
+      overflow: hidden;
+    }
+
+    .question {
+      background: #111a2e;
+      padding: 15px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    .answer {
+      display: none;
+      padding: 15px;
+      background: #1a2742;
+      line-height: 1.5;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #0a0f1a;
+      color: #aaa;
+      margin-top: 30px;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  🇹🇷 Türkiye Milli Takımı - Dünya Kupası SSS
+</header>
+
+<div class="container">
+
+  <div class="faq">
+    <div class="question">Dünya Kupası ne zaman başlıyor?</div>
+    <div class="answer">2026 FIFA Dünya Kupası 11 Haziran 2026 tarihinde başlayacaktır.</div>
+  </div>
+
+  <div class="faq">
+    <div class="question">Türkiye hangi grupta?</div>
+    <div class="answer">Türkiye D Grubu’nda ABD, Paraguay ve Avustralya ile yer almaktadır.</div>
+  </div>
+
+  <div class="faq">
+    <div class="question">Türkiye’nin ilk maçı ne zaman?</div>
+    <div class="answer">İlk maç 14 Haziran 2026 tarihinde Avustralya’ya karşı oynanacaktır.</div>
+  </div>
+
+  <div class="faq">
+    <div class="question">Maçlar hangi saatlerde oynanıyor?</div>
+    <div class="answer">Maç saatleri genellikle Türkiye saati ile sabah erken saatlere denk gelmektedir.</div>
+  </div>
+
+  <div class="faq">
+    <div class="question">Türkiye’nin şampiyonluk şansı nedir?</div>
+    <div class="answer">Turnuva çok zorlu olduğu için net tahmin yapmak mümkün değildir ancak güçlü bir kadroya sahiptir.</div>
+  </div>
+
+</div>
+
+<footer>
+  © 2026 Türkiye Milli Takım Fan Sitesi
+</footer>
+
+<script>
+  const questions = document.querySelectorAll(".question");
+
+  questions.forEach(q => {
+    q.addEventListener("click", () => {
+      const answer = q.nextElementSibling;
+      answer.style.display = answer.style.display === "block" ? "none" : "block";
+    });
+  });
+</script>
+
+</body>
+</html>
